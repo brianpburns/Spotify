@@ -3,7 +3,7 @@ import { ControlButton, WithControls } from 'smart-builder-sdk';
 import { ComponentProps, WithStylesProps } from 'unbounce-smart-builder-sdk-types';
 
 import { DataStructure } from '../types';
-import { getSongId } from '../util/get-song-id';
+import { getContentType, getSongId } from '../util';
 import { Panel } from './control-panel';
 import { Placeholder } from './placeholder';
 import { SpotifyIcon as SettingsIcon } from './spotify-icon';
@@ -12,7 +12,7 @@ import { Overlay, Wrapper } from './styled';
 const SpotifyComponent = ({ data, mode }: ComponentProps<DataStructure, WithStylesProps>) => {
   const { src, compact } = data;
   const songId = getSongId(src);
-  const contentType = src.includes('track') ? 'track' : 'playlist';
+  const contentType = getContentType(src);
 
   return (
     <Wrapper hasSrc={!!songId}>
