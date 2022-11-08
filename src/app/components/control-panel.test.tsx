@@ -1,6 +1,6 @@
-import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
-import { ComponentProps } from 'unbounce-smart-builder-sdk-types';
+import { ComponentProps } from 'smart-builder-sdk';
 
 import { DataStructure } from '../types';
 import { Panel } from './control-panel';

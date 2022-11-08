@@ -1,4 +1,4 @@
-import { Checkbox, InputField } from 'smart-builder-components';
+import { Checkbox, InputField } from 'smart-builder-sdk';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div<{ hasSrc: boolean }>`

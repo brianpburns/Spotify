@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Label } from 'smart-builder-components';
-import { ControlPanelProps } from 'unbounce-smart-builder-sdk-types';
+import { ControlPanelProps } from 'smart-builder-sdk';
 
 import { DataStructure } from '../types';
 import { getSongId } from '../util';
