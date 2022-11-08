@@ -17,8 +17,9 @@
     "lint:prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "build": "rm -rf dist && webpack --env production",
-    "start": "rm -rf dist && webpack --watch",
-    "serve": "node serve-local-files.js"
+    "start": "rm -rf dist && npm run compile-manifest && webpack --watch",
+    "serve": "node serve-local-files.js",
+    "compile-manifest": "tsc --project tsconfig.manifest.json"
   },
   "engines": {
     "node": ">=14.0.0",

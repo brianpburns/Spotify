@@ -5,7 +5,7 @@ import SpotifyComponent from './components/spotify-component';
 const schema = Schema.object({
   src: Schema.string(),
   compact: Schema.boolean().default(false),
-}).noControls();
+});
 
 export const Component = component({
   componentTypeId: 'spotify',
