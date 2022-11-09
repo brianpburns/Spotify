@@ -1,12 +1,11 @@
 import React from 'react';
-import { ControlButton, WithControls } from 'smart-builder-sdk';
-import { ComponentProps, WithStylesProps } from 'unbounce-smart-builder-sdk-types';
+import { ComponentProps, ControlButton, WithControls, WithStylesProps } from 'smart-builder-sdk';
 
 import { DataStructure } from '../types';
 import { getContentType, getSongId } from '../util';
 import { Panel } from './control-panel';
 import { Placeholder } from './placeholder';
-import { SpotifyIcon as SettingsIcon } from './spotify-icon';
+import { SettingsIcon } from './settings-icon';
 import { Overlay, Wrapper } from './styled';
 
 const SpotifyComponent = ({ data, mode }: ComponentProps<DataStructure, WithStylesProps>) => {
@@ -16,7 +15,7 @@ const SpotifyComponent = ({ data, mode }: ComponentProps<DataStructure, WithStyl
 
   return (
     <Wrapper hasSrc={!!songId}>
-      {mode.type === 'edit' && <Overlay />}
+      {mode.type === 'edit' && <Overlay compact={compact} data-testid="overlay" />}
       {songId ? (
         <iframe
           style={{ borderRadius: '12px' }}
