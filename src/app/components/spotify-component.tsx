@@ -15,7 +15,7 @@ const SpotifyComponent = ({ data, mode }: ComponentProps<DataStructure, WithStyl
 
   return (
     <Wrapper hasSrc={!!songId}>
-      {mode.type === 'edit' && <Overlay />}
+      {mode.type === 'edit' && <Overlay compact={compact} data-testid="overlay" />}
       {songId ? (
         <iframe
           style={{ borderRadius: '12px' }}

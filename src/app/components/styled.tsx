@@ -30,14 +30,14 @@ export const StyledInputField = styled(InputField)<{ hasValue: boolean }>`
   color: ${({ hasValue }) => (hasValue ? '#303030' : '#8D8D8D')};
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<{ compact: boolean }>`
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 11;
-  height: 80px;
+  height: ${({ compact }) => (compact ? '80px' : '380px')};
 `;
 
 export const StyledCheckbox = styled(Checkbox)`
