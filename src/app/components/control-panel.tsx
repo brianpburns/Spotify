@@ -46,7 +46,7 @@ export const Panel = ({ data, dispatch }: ControlPanelProps<DataStructure>) => {
         value={tempSrc}
         onChange={(e) => setTempSrc(e.currentTarget.value)}
         onBlur={onUrlChange}
-        placeholder="https://open.spotify.com/track/4IqBIufFMOV1sSYhzIPDoj?si=ee9e5b896e7b47de"
+        placeholder="https://open.spotify.com/artist/2oBhyKsUYj7AIweJAeqF33?si=1u6sAQuxSf6jbsOo0MG5wA"
         hasValue={!!tempSrc}
         type="text"
         minimal
