@@ -5,7 +5,7 @@ import { DataStructure } from '../types';
 import { getContentType, getSongId } from '../util';
 import { Panel } from './control-panel';
 import { Placeholder } from './placeholder';
-import { SpotifyIcon as SettingsIcon } from './spotify-icon';
+import { SettingsIcon } from './settings-icon';
 import { Overlay, Wrapper } from './styled';
 
 const SpotifyComponent = ({ data, mode }: ComponentProps<DataStructure, WithStylesProps>) => {
